@@ -169,7 +169,6 @@ main {
     text-align: center;
 /* ...existing code... */
 
-.mary-message {
 /* Modal Mary */
 .mary-modal {
     display: none;
@@ -225,19 +224,7 @@ main {
     color: #a67c00;
     font-family: 'Segoe Script', cursive;
     margin-top: 0.8rem;
-}
-    display: none;
-    margin-top: 1.2rem;
-    font-size: 1.5rem;
-    font-family: 'Dancing Script', cursive;
-    color: #bfa600;
-    background: rgba(255,255,224,0.85);
-    border-radius: 18px;
-    box-shadow: 0 2px 16px #ffd70055;
-    padding: 1.2rem 2rem;
-    position: relative;
-    animation: fadeInUp 1.2s;
-}
+/* ...existing code... */
 .mary-message .emoji {
     font-size: 2.2rem;
     margin: 0 0.3rem;
