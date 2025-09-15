@@ -80,4 +80,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
     document.querySelector('.love-btn').addEventListener('click', showHeart);
+    // Mensaje especial para Mary
+    const maryMessage = document.getElementById('maryMessage');
+    document.querySelector('.love-btn').addEventListener('click', () => {
+        maryMessage.innerHTML = `<span class="emoji">🌻</span> <b>Mary</b>, eres mi sol, mi girasol y mi alegría. <span class="emoji">💛</span><br>Gracias por iluminar mi vida cada día.<br><span class="emoji">🌻</span> Te amo infinitamente <span class="emoji">💛</span>`;
+        maryMessage.style.display = 'block';
+        maryMessage.style.opacity = '1';
+        maryMessage.style.animation = 'fadeInUp 1.2s';
+        setTimeout(() => {
+            maryMessage.style.opacity = '0';
+            maryMessage.style.display = 'none';
+        }, 6000);
+    });
 });
