@@ -81,22 +81,43 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     document.querySelector('.love-btn').addEventListener('click', showHeart);
     // Mensaje especial para Mary
-    const maryMessage = document.getElementById('maryMessage');
-    function showMaryMessage() {
-        maryMessage.innerHTML = `<span class="emoji">🌻</span> <b>Mary</b>, eres mi sol, mi girasol y mi alegría. <span class="emoji">💛</span><br>Gracias por iluminar mi vida cada día.<br><span class="emoji">🌻</span> Te amo infinitamente <span class="emoji">💛</span>`;
-        maryMessage.style.display = 'block';
-        maryMessage.style.opacity = '1';
-        maryMessage.style.animation = 'fadeInUp 1.2s';
-        setTimeout(() => {
-            maryMessage.style.opacity = '0';
-            setTimeout(() => {
-                maryMessage.style.display = 'none';
-            }, 600);
-        }, 6000);
+    // Modal Mary
+    const maryModal = document.getElementById('maryModal');
+    const maryModalClose = document.getElementById('maryModalClose');
+    const maryAnimatedName = document.getElementById('maryAnimatedName');
+    const maryModalText = document.getElementById('maryModalText');
+
+    function animateMaryName(name, element, speed = 180) {
+        element.innerHTML = '';
+        let i = 0;
+        function type() {
+            if (i < name.length) {
+                element.innerHTML += `<span style="opacity:0.7;">${name[i]}</span>`;
+                element.querySelectorAll('span')[i].style.animation = `fadeIn 0.5s ${i*0.13}s forwards`;
+                i++;
+                setTimeout(type, speed);
+            }
+        }
+        type();
+    }
+
+    function showMaryModal() {
+        maryModal.classList.add('show');
+        animateMaryName('MARY', maryAnimatedName, 220);
+        maryModalText.innerHTML = `<span class="emoji">🌻</span> Eres mi sol, mi girasol y mi alegría. <span class="emoji">💛</span><br>Gracias por iluminar mi vida cada día.<br><span class="emoji">🌻</span> Te amo infinitamente <span class="emoji">💛</span>`;
+    }
+    function hideMaryModal() {
+        maryModal.classList.remove('show');
+        maryAnimatedName.innerHTML = '';
+        maryModalText.innerHTML = '';
     }
     document.querySelector('.love-btn').addEventListener('click', (e) => {
         e.stopPropagation();
         showHeart();
-        showMaryMessage();
+        showMaryModal();
+    });
+    maryModalClose.addEventListener('click', hideMaryModal);
+    maryModal.addEventListener('click', function(e) {
+        if (e.target === maryModal) hideMaryModal();
     });
 });
