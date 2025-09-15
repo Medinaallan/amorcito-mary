@@ -45,15 +45,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         fall();
     }
-    setInterval(createSunflower, 400);
-    for(let i=0;i<18;i++) setTimeout(createSunflower, i*200);
+    setInterval(createSunflower, 1200); // Menos girasoles cayendo
+    for(let i=0;i<7;i++) setTimeout(createSunflower, i*350); // Menos girasoles iniciales
 
     // Carrusel de galería
     const images = document.querySelectorAll('.carousel-images img');
     let current = 0;
     function showImage(idx) {
         images.forEach((img, i) => {
-            img.classList.toggle('active', i === idx);
+            img.style.display = i === idx ? 'block' : 'none';
         });
     }
     showImage(current);
