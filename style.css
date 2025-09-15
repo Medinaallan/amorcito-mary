@@ -105,7 +105,6 @@ main {
     position: relative;
 }
 .gallery-section h2::before {
-    content: "🌻";
     font-size: 1.5rem;
     position: absolute;
     left: -2rem;
