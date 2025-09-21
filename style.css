@@ -234,8 +234,8 @@ main {
 }
 
 .love-btn {
-    background: linear-gradient(90deg, #f9d67a 60%, #fffbe6 100%);
-    color: #bfa600;
+    background: linear-gradient(90deg, #e9a6b2 60%, #fffbe6 100%);
+    color: #fff;
     font-size: 1.3rem;
     font-family: 'Dancing Script', cursive;
     border: none;
@@ -249,8 +249,8 @@ main {
 }
 
 .love-btn:hover {
-    background: linear-gradient(90deg, #fffbe6 0%, #f9d67a 100%);
-    box-shadow: 0 4px 24px #c2a94bcc;
+    background: linear-gradient(90deg, #fffbe6 0%, #b84f62 100%);
+    box-shadow: 0 4px 24px #e9a6b299;
     transform: scale(1.08);
 }
 
