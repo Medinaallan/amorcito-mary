@@ -254,16 +254,7 @@ main {
     transform: scale(1.08);
 }
 
-.love-btn::after {
-    content: "💛";
-    position: absolute;
-    right: 18px;
-    top: 50%;
-    transform: translateY(-50%) scale(1.2);
-    opacity: 0.7;
-    pointer-events: none;
-    transition: opacity 0.3s;
-}
+
 
 .love-btn:hover::after {
     opacity: 1;

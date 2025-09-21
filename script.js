@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function showMaryModal() {
         maryModal.classList.add('show');
         animateMaryName('MARY', maryAnimatedName, 220);
-        maryModalText.innerHTML = `<span class="emoji">🌻</span> Eres mi sol, mi girasol y mi alegría. <span class="emoji">💛</span><br>Gracias por iluminar mi vida cada día.<br><span class="emoji">🌻</span> Te amo infinitamente <span class="emoji">💛</span>`;
+        maryModalText.innerHTML = `<span class="emoji"></span> Eres mi sol, mi girasol y mi alegría. <span class="emoji"></span><br>Gracias por iluminar mi vida cada día.<br><span class="emoji"></span> Te amo infinitamente <span class="emoji"></span>`;
     }
     function hideMaryModal() {
         maryModal.classList.remove('show');
